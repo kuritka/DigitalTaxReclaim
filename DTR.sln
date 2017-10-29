@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTR", "DTR\DTR.csproj", "{418D82AF-7C48-428B-8F7E-7E0E15C60DAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTR", "DTR\DTR.csproj", "{418D82AF-7C48-428B-8F7E-7E0E15C60DAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7BA46E9D-9EC8-4AC2-B317-1C83CC937F45}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

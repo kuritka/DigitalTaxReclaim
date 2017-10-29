@@ -33,11 +33,12 @@ namespace DTR.Data
         {
             try
             {
-                return _context.Reclaims
-                    .Where(d => d.ReclaimState.ID == (int)InstanceState.New)
-                    .OrderBy(d => d.Created)
+                return _context.Reclaims                   
                     .Include(reclaim => reclaim.CreatedBy)
+                    .Include(reclaim => reclaim.ReclaimState)
+                      .Where(d => d.ReclaimState.ID == (int)InstanceState.New)
                     .ToList();
+                   
             }catch(Exception ex)
             {
                 _logger.LogError($"{ex.Message}");

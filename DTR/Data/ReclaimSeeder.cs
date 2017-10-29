@@ -74,8 +74,8 @@ namespace DTR.Data
             {
                 if (!_context.Reclaims.Any())
                 {
-                    _context.Add(new Reclaim() {  Product = "ProductA", Message = "Hello World", TradeInformation = 0, ReclaimState = attachedState, Created = DateTime.Now, CreatedBy = customer1});
-                    _context.Add(new Reclaim() {  Product = "ProductB", Message = "Second Message", TradeInformation = 0, ReclaimState = attachedState, Created = DateTime.Now.AddDays(-1), CreatedBy = customer2 });
+                    _context.Add(new Reclaim() {  Product = "ProductA", Message = "Hello World", TradeInformation = 0, ReclaimState = newState, Created = DateTime.Now, CreatedBy = customer1});
+                    _context.Add(new Reclaim() {  Product = "ProductB", Message = "Second Message", TradeInformation = 0, ReclaimState = newState, Created = DateTime.Now.AddDays(-1), CreatedBy = customer2 });
 
                 }
             }

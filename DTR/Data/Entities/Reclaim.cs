@@ -22,7 +22,6 @@ namespace DTR.Data.Entities
        // public int? OpenedById { get; set; }
        // public Account OpenedBy { get; set; }
 
-        //public int? CreatedById { get; set; }
         public Account CreatedBy { get; set; }
     }
 

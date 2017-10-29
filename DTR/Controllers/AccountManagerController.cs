@@ -23,7 +23,7 @@ namespace DTR.Controllers
         [HttpGet("AttachTrade")]
         public IActionResult Index()
         {
-            var reclaims = _repository.GetAllReclaims();
+            var reclaims = _repository.GetReadyToAttachTrade();
             var resultsViewModels = reclaims.Select(d => _mapper.Map<Reclaim, AttachTradeDetailViewModel>(d)).ToList();
             return View(resultsViewModels);
         }
