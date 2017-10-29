@@ -1,0 +1,16 @@
+﻿@model IEnumerable<AttachTradeDetailViewModel>
+@{
+    ViewData["Title"] = "Attach Trade Information";
+}
+<p>Count: @Model.Count()</p>
+<form method="post" action="attachtrade">
+<div asp-validation-summary="ModelOnly"></div>
+    @foreach (var p in Model)
+    {
+        <div class="col-md-8 col-lg-offset-3">
+            <div class="well well-sm">
+               @Html.Partial("TradeInformationDetail",p)
+            </div>
+        </div>
+    }
+</form>

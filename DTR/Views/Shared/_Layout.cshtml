@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+   <div class="navbar navbar-inverse">
+        <header class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">Digital Tax Reclaim</div>
+                <button class="navbar-toggle btn btn-success" data-toggle="collapse" data-target="#menu" >&#9776;</button>
+            </div>
+            <div id="menu" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-controller="App" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Customer" asp-action="EnterReclaim">Enter Tax Reclaim</a></li>
+                    <li><a asp-controller="AccountManager" asp-action="Index">Attach Trade Information</a></li>
+                    <li><a asp-controller="Team" asp-action="Index">Review Reclaims</a></li>
+                    @if(!User.Identity.IsAuthenticated)
+                    {
+                        <li><a asp-controller="Account" asp-action="Login">Sign In</a></li>
+                    }
+                    else
+                    {
+                        <li><a asp-controller="Account" asp-action="Logout">Sign Out</a></li>
+                    }
+                </ul>
+            </div>
+        </header>
+    </div>
+    <section class="container">
+        <h2 class="text-center">@ViewBag.Title</h2>
+        <p class="text-center">@ViewBag.UserMessage</p>
+        @RenderBody()
+    </section>
+    
+    <footer class="container"> <div class="text-center">Copyright 2017 Deutsche Boerse</div></footer>
+    <script src="~/lib/jQuery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

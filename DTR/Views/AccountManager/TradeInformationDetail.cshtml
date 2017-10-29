@@ -1,0 +1,21 @@
+﻿@model AttachTradeDetailViewModel
+    <div>
+            <div class="form-group">
+                <label asp-for="TradeInformation">Attach trade information</label>
+                <input type="text" asp-for="TradeInformation" class="form-control" value="@Model.TradeInformation" />
+                <span asp-validation-for="TradeInformation" class="text-danger"></span>
+           </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-lg"><i class="fa fa-plus-circle"></i> Attach </button>
+            </div>
+            <div class="form-group">
+                <ul class="list-inline">
+                    <li>@Model.CreatedBy</li>
+                    <li>@Model.Created.ToShortDateString()</li>
+                    <li>@Model.Product</li>
+                </ul>
+                <div class="form-group">
+                    @Model.Message
+                </div>
+            </div>
+    </div>
