@@ -1,6 +1,6 @@
 ﻿{
   "ConnectionStrings": {
-    "MSSQL": "Data Source=ec2-52-57-250-129.eu-central-1.compute.amazonaws.com;Initial Catalog=DTR;Persist Security Info=True;User ID=michal;Password=.Password333"
+    "MSSQL": "Data Source=ec2-52-57-250-129.eu-central-1.compute.amazonaws.com;Initial Catalog=DTR;Persist Security Info=True;User ID=michal;Password=XXXX"
   },
   "Logging": {
     "LogLevel": {
